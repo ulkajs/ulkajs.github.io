@@ -7,8 +7,6 @@ Documentation website for ulkajs (<a href="https://ulka.js.org">ulka.js.org</a>)
 
 </p>
 
----
-
 ## 🤗 Contributing
 
 We welcome you to join the development of this documentation. Please see [contributing](https://github.com/ulkajs/ulka/blob/master/CONTRIBUTING.md) guidelines.
