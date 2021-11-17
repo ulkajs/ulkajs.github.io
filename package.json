@@ -6,7 +6,8 @@
   "scripts": {
     "develop": "ulka develop",
     "serve": "ulka serve",
-    "build": "ulka build"
+    "build": "ulka build",
+    "deploy": "gh-pages -d build -t true"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/ulkajs/ulkajs.github.io#readme",
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "ulka": "^0.6.8-rc.2"
   },
   "dependencies": {
