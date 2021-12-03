@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+main > div,
+main > pre {
+  max-width: 55rem;
+}
+
+.hero {
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.hero img {
+  width: 7rem;
+}
+
+.hero div:first-child {
+  margin-bottom: 1rem;
+}
+
+.hero .buttons {
+  margin-top: 1.3rem;
+}
+
+.highlights {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  padding: 1rem 0 2rem 0;
+  text-align: center;
+}
+
+.highlights h5 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.highlights p {
+  font-size: 0.85rem;
+}

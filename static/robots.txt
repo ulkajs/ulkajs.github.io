@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://ulkajs.github.io/sitemap.xml
