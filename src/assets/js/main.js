@@ -1,5 +1,9 @@
 const isun = document.querySelector("i.icon-sun-inv");
 const imoon = document.querySelector("i.icon-moon-inv");
+const imenu = document.querySelector("i.icon-menu");
+const icancel = document.querySelector("i.icon-cancel");
+const backdrop = document.querySelector(".backdrop");
+const sidebars = document.querySelectorAll("[data-responsive-sidebar]");
 
 const getTheme = () =>
   localStorage.getItem("theme") ||
@@ -29,21 +33,12 @@ const toggleTheme = () => {
   setTheme(currentTheme === "dark" ? "light" : "dark");
 };
 
-setTheme();
-
-document.querySelector(".theme-toggler").addEventListener("click", toggleTheme);
-
 const toggleSidebar = () => {
-  const imenu = document.querySelector("i.icon-menu");
-  const icancel = document.querySelector("i.icon-cancel");
-
-  const backdrop = document.querySelector(".backdrop");
-  const els = document.querySelectorAll("[data-responsive-sidebar]");
-  els.forEach((el) => {
+  sidebars.forEach((el) => {
     el.classList.toggle("right-0");
   });
 
-  if (els[0].classList.contains("right-0")) {
+  if (sidebars[0].classList.contains("right-0")) {
     backdrop.style.display = "block";
     imenu.classList.add("hide");
     icancel.classList.remove("hide");
@@ -57,3 +52,7 @@ const toggleSidebar = () => {
 document
   .querySelector(".sidebar-toggler")
   .addEventListener("click", toggleSidebar);
+
+setTheme();
+backdrop.addEventListener("click", toggleSidebar);
+document.querySelector(".theme-toggler").addEventListener("click", toggleTheme);

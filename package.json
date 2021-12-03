@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "documentation website",
   "main": "index.js",
+  "scripts": {
+    "dev": "ulka -w",
+    "build": "ulka"
+  },
   "repository": "https://github.com/ulkajs/ulkajs.github.io",
   "author": "Roshan Acharya <acharyaroshan2357@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "ulka": "^1.0.0"
+  }
 }
