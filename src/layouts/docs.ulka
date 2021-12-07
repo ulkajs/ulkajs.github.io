@@ -1,47 +1,38 @@
+---
+_layout: main.ulka
+stylesheets: ["/assets/css/docs.css"]
+hasSidebar: true
+---
+
 {{
-  const stylesheets = ["/assets/css/docs.css"]
-  include("../partials/globalvars.ulka") // adds head, nav and footer to context
-  const sidebar = include("../partials/sidebar.ulka")
   const next = collections.docs.find((t) => t.matter.page === matter.page + 1)
   const prev = collections.docs.find((t) => t.matter.page === matter.page - 1)
+  
+  const prevEl = prev
+    ? /* HTML */ `<a href="${prev.link}" class="button">
+        <i class="icon-left-open-mini"></i>
+        ${prev.matter.title}
+      </a>`
+    : /* HTML */ `<span></span>`
+  
+  const nextEl = next
+    ? /* HTML */ `<a href="${next.link}" class="button">
+        ${next.matter.title}
+        <i class="icon-right-open-mini"></i>
+      </a>`
+    : /* HTML */ `<span></span>`
+  
+  const prevNext = prevEl + nextEl
 }}
 
-<!DOCTYPE html>
-<html lang="en">
-  {{ head }}
+<h1>{{ matter.title }}</h1>
 
-  <body>
-    <div style="display: none" class="backdrop"></div>
+{{ content }}
 
-    {{ nav }} {{ sidebar }}
+<br />
+<a target="_blank" href="{{ githubLink }}" class="button">
+  <i class="icon-pencil"></i>
+  Edit this page on github
+</a>
 
-    <main>
-      <h1>{{ matter.title }}</h1>
-
-      {{ content }}
-
-      <br />
-
-      <a target="_blank" href="{{ githubLink }}" class="button">
-        <i class="icon-pencil"></i>
-        Edit this page on github
-      </a>
-
-      <div class="buttons">
-        {{
-          prev
-            ? `<a href="${prev.link}" class="button"><i class="icon-left-open-mini"></i>${prev.matter.title}</a>`
-            : "<span></span>"
-        }}
-        <!--  -->
-        {{
-          next
-            ? `<a href="${next.link}" class="button">${next.matter.title}<i class="icon-right-open-mini"></i></a>`
-            : "<span></span>"
-        }}
-      </div>
-    </main>
-
-    {{ footer }}
-  </body>
-</html>
+<div class="buttons">{{ prevNext }}</div>

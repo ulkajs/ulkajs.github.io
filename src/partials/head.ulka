@@ -1,15 +1,21 @@
+{{
+  const stylesheets = [
+    "/assets/css/fonts.css",
+    "/assets/css/style.css",
+    "/assets/css/docsearch.css",
+    "/assets/css/prism.css",
+    "/assets/icons/i.css",
+    ...(matter.stylesheets || []),
+  ]
+}}
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/fonts.css" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="/assets/icons/i.css" />
-  <link rel="stylesheet" href="/assets/css/docsearch.css" />
+
+  {{ stylesheets.map((href) => /* HTML */ `<link rel="stylesheet" href="${href}" />`) }}
+
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
-  {{
-    typeof stylesheets === "object" &&
-      stylesheets.map((href) => /* HTML */`<link rel="stylesheet" href="${href}" />`)
-  }}
   <title>{{ matter.title }} | Ulka</title>
 </head>

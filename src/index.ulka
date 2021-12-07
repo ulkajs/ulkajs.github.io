@@ -1,74 +1,57 @@
 ---
+_layout: main.ulka
 title: Home
+stylesheets: ["/assets/css/index.css"]
 ---
 
-{{
-  const stylesheets = ["/assets/css/index.css"]
-  include("./partials/globalvars.ulka")
-}}
+<div class="hero">
+  <div>
+    <img class="hero-logo" src="/assets/images/ulka-logo.svg" alt="ulka logo" />
+  </div>
+  <div>
+    <h1>Ulka</h1>
+    <p>
+      A fast, pluggable and lightweight static site generator written in
+      javascript.
+    </p>
 
-<!DOCTYPE html>
-<html lang="en">
-  {{ head }}
+    <div class="buttons">
+      <a class="button">Get Started</a>
+      <a class="button">
+        Github
+        <i class="icon-github-circled"></i>
+      </a>
+    </div>
+  </div>
+</div>
 
-  <body>
-    {{ nav }}
+<hr />
 
-    <div style="display: none" class="backdrop"></div>
+<div class="highlights">
+  <div>
+    <h5>Blazing Fast</h5>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+      voluptas.
+    </p>
+  </div>
+  <div>
+    <h5>Pluggable</h5>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+      voluptas.
+    </p>
+  </div>
+  <div>
+    <h5>Lightweight</h5>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+      voluptas.
+    </p>
+  </div>
+</div>
 
-    <main class="container">
-      <div class="hero">
-        <div>
-          <img
-            class="hero-logo"
-            src="/assets/images/ulka-logo.svg"
-            alt="ulka logo"
-          />
-        </div>
-        <div>
-          <h1>Ulka</h1>
-          <p>
-            A fast, pluggable and lightweight static site generator written in
-            javascript.
-          </p>
-
-          <div class="buttons">
-            <a class="button">Get Started</a>
-            <a class="button">
-              Github
-              <i class="icon-github-circled"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="highlights">
-        <div>
-          <h5>Blazing Fast</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-            voluptas.
-          </p>
-        </div>
-        <div>
-          <h5>Pluggable</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-            voluptas.
-          </p>
-        </div>
-        <div>
-          <h5>Lightweight</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-            voluptas.
-          </p>
-        </div>
-      </div>
-
-      <pre><code><small># Create new project</small>
+<pre><code><small># Create new project</small>
 npm init @ulkajs/app my-blog
 <small># Goto project directory</small>
 cd my-blog
@@ -78,9 +61,4 @@ npm install
 npx ulka
 <small># Build and watch</small>
 npx ulka -w</code></pre>
-      <br />
-    </main>
-
-    {{ footer }}
-  </body>
-</html>
+<br />

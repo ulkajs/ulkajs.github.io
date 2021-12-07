@@ -1,8 +1,10 @@
 const path = require("path");
+const prism = require("markdown-it-prism");
 const { defineConfig } = require("ulka");
 
 module.exports = defineConfig((ulka) => {
-  ulka.engines[".md"].md.set({ html: true });
+  ulka.engines[".md"].md.set({ html: true }).use(prism);
+
   return {
     input: "src",
     output: "dist",

@@ -3,9 +3,9 @@ title: Introduction
 page: 1
 links:
   [
-    { title: "Static site generator", link: "#static-site-generator" },
-    { title: "Why SSG", link: "#why-static-site-generator" },
-    { title: "Why Ulka", link: "#why-ulka" },
+    { title: "Static site generator", href: "#static-site-generator" },
+    { title: "Why SSG", href: "#why-static-site-generator" },
+    { title: "Why Ulka", href: "#why-ulka" },
   ]
 ---
 
@@ -42,10 +42,10 @@ Static site generators generates static assets and contents already polluted wit
 - [Supports multiple template languages.](#suports-multiple-template-languages)
 - [No client side javascript.](#no-client-side-javascript)
 - [Custom template engine for javascript developers.](#custom-template-engine-for-javascript-developers)
-- [Faster Installation](#faster-installation)
 - [Pluggable](#pluggable)
 - [Directory Structure Flexibility](#directory-structure-flexibility)
 - [Powerful Configuration](#powerful-configuration)
+- [Faster Installation](#faster-installation)
 
 ### # Supports multiple template languages.
 
@@ -63,21 +63,17 @@ Ulka introduces new templating engine `ulka`. This template engine allows you to
 
 Input:
 
-```
+```jsx
 <h1>{{ ["ulka", "js", "is", "awesome"].join(" ") }}</h1>
 ```
 
 Output:
 
-```
+```jsx
 <h1>ulka js is awesome</h1>
 ```
 
 {% endraw %}
-
-### # Faster Installation
-
-Ulka aims to be lightweight. So, before publishing libraries used by ulka are bundled using rollup. This makes installation faster and save your time and space.
 
 ### # Pluggable
 
@@ -97,3 +93,7 @@ Ulka doesn't require you have files in specific folders. You can have your files
 Ulka allows you to change config of a template through frontmatter. Which makes it easier to have different config for each templates in a collection.
 
 It is also possible to change config for every template in a collection through config file. Ulka makes to easier to sort collection, change link, change layout and perform difrrent task on all templates of a collection directly through config file.
+
+### # Faster Installation
+
+Ulka aims to be lightweight. So, before publishing libraries used by ulka are bundled using rollup. This makes installation faster and saves your time and space.

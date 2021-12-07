@@ -3,28 +3,35 @@ page: 2
 title: Quickstart
 links:
   [
-    { title: "Creating new project", path: "#creating-new-project" },
-    { title: "Creating production build", path: "#creating-production-build" },
+    { title: "Creating new project", href: "#creating-new-project" },
+    { title: "Creating production build", href: "#creating-production-build" },
   ]
 ---
 
-> This quick start is not intended for developers who are just getting into ulka. For step by step guide, head to our [tutorial](/tutorial)
+> This quick start is not intended for developers who are new to ulka. For step by step guide, head to our [tutorial](/tutorial)
 
 ## Creating new project
 
-```sh
+```bash
 npm init @ulkajs/app ulka-site
 cd ulka-site
 npm install
-npx ulka -w
 ```
 
-Above command will generate a basic template install all the dependencies and start the ulka development server.
+Above command will generate a basic template install all the dependencies.
 
-## Creating production build
+## Building static site
 
-```sh
+```bash
 npx ulka
 ```
 
-This command builds all the files into output path specified in `ulka-config.js`
+Above command builds all the files into output path specified in `ulka-config.js`.
+
+## Development server
+
+```bash
+npx ulka -w
+```
+
+Above command build, create live development server and watch files.
