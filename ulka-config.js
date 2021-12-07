@@ -1,9 +1,14 @@
 const path = require("path");
+const slugify = require("@sindresorhus/slugify");
 const prism = require("markdown-it-prism");
+const anchor = require("markdown-it-anchor");
 const { defineConfig } = require("ulka");
 
 module.exports = defineConfig((ulka) => {
-  ulka.engines[".md"].md.set({ html: true }).use(prism);
+  ulka.engines[".md"].md
+    .set({ html: true })
+    .use(prism)
+    .use(anchor, { slugify });
 
   return {
     input: "src",

@@ -16,7 +16,9 @@
     "ulka": "^1.0.0"
   },
   "devDependencies": {
+    "@sindresorhus/slugify": "^1.1.0",
     "fast-glob": "^3.2.7",
+    "markdown-it-anchor": "^8.4.1",
     "markdown-it-prism": "^2.2.1",
     "prettier": "^2.5.1"
   }

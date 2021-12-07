@@ -4,7 +4,8 @@ title: Quickstart
 links:
   [
     { title: "Creating new project", href: "#creating-new-project" },
-    { title: "Creating production build", href: "#creating-production-build" },
+    { title: "Building", href: "#building-static-site" },
+    { title: "Development Server", href: "#development-server" },
   ]
 ---
 
