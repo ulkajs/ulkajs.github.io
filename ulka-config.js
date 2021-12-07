@@ -19,18 +19,23 @@ module.exports = defineConfig((ulka) => {
       main: {
         match: ["index.ulka"],
       },
-      docs: {
-        match: "docs/**.md",
-        layout: "docs.ulka",
-        sort: (a, b) => a.context.matter.page - b.context.matter.page,
-        forEach(temp) {
-          const base = `https://github.com/ulkajs/ulkajs.github.io/blob/main/src/`;
-          const rel = path.relative(ulka.configs.input, temp.fileinfo.filepath);
-
-          temp.context.githubLink = base + rel;
-        },
-      },
+      docs: content(ulka, "docs/**.md"),
+      tutorial: content(ulka, "tutorial/**.md"),
     },
     copy: ["assets/**"],
   };
 });
+
+const content = (ulka, match) => {
+  return {
+    match,
+    layout: "docs.ulka",
+    sort: (a, b) => a.context.matter.page - b.context.matter.page,
+    forEach(temp) {
+      const base = `https://github.com/ulkajs/ulkajs.github.io/blob/main/src/`;
+      const rel = path.relative(ulka.configs.input, temp.fileinfo.filepath);
+
+      temp.context.githubLink = base + rel;
+    },
+  };
+};

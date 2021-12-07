@@ -16,7 +16,7 @@
 <aside class="sidebar" data-responsive-sidebar>
   <ul>
     {{
-      collections.docs
+      collections[name]
         .map((template) =>
           createLi(template.matter.title, template.link, template.matter.links)
         )

@@ -5,8 +5,8 @@ hasSidebar: true
 ---
 
 {{
-  const next = collections.docs.find((t) => t.matter.page === matter.page + 1)
-  const prev = collections.docs.find((t) => t.matter.page === matter.page - 1)
+  const next = collections[name].find((t) => t.matter.page === matter.page + 1)
+  const prev = collections[name].find((t) => t.matter.page === matter.page - 1)
   
   const prevEl = prev
     ? /* HTML */ `<a href="${prev.link}" class="button">
