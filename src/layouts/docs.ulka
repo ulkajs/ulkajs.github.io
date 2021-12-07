@@ -21,8 +21,6 @@ hasSidebar: true
         <i class="icon-right-open-mini"></i>
       </a>`
     : /* HTML */ `<span></span>`
-  
-  const prevNext = prevEl + nextEl
 }}
 
 <h1>{{ matter.title }}</h1>
@@ -35,4 +33,4 @@ hasSidebar: true
   Edit this page on github
 </a>
 
-<div class="buttons">{{ prevNext }}</div>
+<div class="buttons">{{ prevEl + nextEl }}</div>

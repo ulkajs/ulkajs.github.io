@@ -302,6 +302,7 @@ pre small {
   display: none;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .sidebar-toggler i {

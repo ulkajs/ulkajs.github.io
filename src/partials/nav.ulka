@@ -10,10 +10,10 @@
     <div style="display: flex">
       <ul class="nav-items" data-responsive-sidebar>
         <li>
-          <a class="{{ link.startsWith(`/docs`) ? `active` : "" }}" href="/docs"> Docs </a>
+          <a class="{{ link.startsWith(`/docs`) ? `active` : `` }}" href="/docs"> Docs </a>
         </li>
         <li>
-          <a class="{{ link.startsWith(`/tutorial`) ? `active` : "" }}" href="/tutorial"> Tutorial </a>
+          <a class="{{ link.startsWith(`/tutorial`) ? `active` : `` }}" href="/tutorial"> Tutorial </a>
         </li>
         <li>
           <a target="_blank" href="https://github.com/ulkajs/ulka">
@@ -34,7 +34,6 @@
         <li>
           <button
             class="sidebar-toggler"
-            style="background: transparent; border: none"
           >
             <i class="icon-menu"></i>
             <i class="icon-cancel hide"></i>
