@@ -1,15 +1,18 @@
+---
+title: Home
+---
+
+{{
+  const stylesheets = ["/assets/css/index.css"]
+  include("./partials/globalvars.ulka")
+}}
+
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    {{ include("./partials/head.ulka") }}
-
-    <title>Home | Ulka</title>
-    <link rel="stylesheet" href="/assets/css/index.css" />
-  </head>
+  {{ head }}
 
   <body>
-   {{ include("./partials/nav.ulka") }}
+    {{ nav }}
 
     <div style="display: none" class="backdrop"></div>
 
@@ -78,6 +81,6 @@ npx ulka -w</code></pre>
       <br />
     </main>
 
-   {{ include("./partials/footer.ulka") }}
+    {{ footer }}
   </body>
 </html>

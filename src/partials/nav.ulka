@@ -1,42 +1,46 @@
 <nav>
-    <div class="container">
-        <a href="/" class="nav-logo">
-            <img
-                class="nav-logo-image"
-                src="/assets/images/ulka-logo-name.svg"
-                alt="ulka-logo"
-            />
-        </a>
-        <div style="display: flex">
-            <ul class="nav-items" data-responsive-sidebar>
-            <li><a class="{{ link.startsWith(`/docs`) ? `active`: '' }}" href="/docs">Docs</a></li>
-            <li><a class="{{ link.startsWith(`/tutorial`) ? `active`: '' }}" href="/tutorial">Tutorial</a></li>
-            <li>
-                <a target="_blank" href="https://github.com/ulkajs/ulka">
-                    Github<i class="icon-link-ext"></i>
-                </a>
-            </li>
-            <li>
-                <button class="theme-toggler">
-                    <i class="icon-sun-inv"></i>
-                    <i class="icon-moon-inv"></i>
-                </button>
-            </li>
-            </ul>
-            <ul class="nav-items">
-            <li>
-                <div id="docsearch"></div>
-            </li>
-            <li>
-                <button
-                    class="sidebar-toggler"
-                    style="background: transparent; border: none"
-                >
-                    <i class="icon-menu"></i>
-                    <i class="icon-cancel hide"></i>
-                </button>
-            </li>
-            </ul>
-        </div>
+  <div class="container">
+    <a href="/" class="nav-logo">
+      <img
+        class="nav-logo-image"
+        src="/assets/images/ulka-logo-name.svg"
+        alt="ulka-logo"
+      />
+    </a>
+    <div style="display: flex">
+      <ul class="nav-items" data-responsive-sidebar>
+        <li>
+          <a class="{{ link.startsWith(`/docs`) ? `active` : "" }}" href="/docs"> Docs </a>
+        </li>
+        <li>
+          <a class="{{ link.startsWith(`/tutorial`) ? `active` : "" }}" href="/tutorial"> Tutorial </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/ulkajs/ulka">
+            Github<i class="icon-link-ext"></i>
+          </a>
+        </li>
+        <li>
+          <button class="theme-toggler">
+            <i class="icon-sun-inv"></i>
+            <i class="icon-moon-inv"></i>
+          </button>
+        </li>
+      </ul>
+      <ul class="nav-items">
+        <li>
+          <div id="docsearch"></div>
+        </li>
+        <li>
+          <button
+            class="sidebar-toggler"
+            style="background: transparent; border: none"
+          >
+            <i class="icon-menu"></i>
+            <i class="icon-cancel hide"></i>
+          </button>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

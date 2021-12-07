@@ -1,126 +1,47 @@
+{{
+  const stylesheets = ["/assets/css/docs.css"]
+  include("../partials/globalvars.ulka") // adds head, nav and footer to context
+  const sidebar = include("../partials/sidebar.ulka")
+  const next = collections.docs.find((t) => t.matter.page === matter.page + 1)
+  const prev = collections.docs.find((t) => t.matter.page === matter.page - 1)
+}}
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     {{ include("../partials/head.ulka") }}
+  {{ head }}
 
-    <title>{{ matter.title }} | Ulka</title>
-    <link rel="stylesheet" href="/assets/css/docs.css" />
-  </head>
   <body>
-  
-    {{ include("../partials/nav.ulka") }}
-
     <div style="display: none" class="backdrop"></div>
 
-    {{ include("../partials/sidebar.ulka") }}
-
-
-    <!-- <main>
-      <h1>Introduction</h1>
-
-      <h2>Getting Started</h2>
-
-      <p>There are two main ways to get started with Ulka:</p>
-
-      <ol>
-        <li>
-          <a href="#">Tutorial</a>
-          <p>
-            Step by step guide to create new ulka project. Go through this if
-            you are just starting with ulka js.
-          </p>
-        </li>
-        <li>
-          <a href="#">Quickstart</a>
-          <p>Summary on how to generate a new ulka project.</p>
-        </li>
-      </ol>
-
-      <br />
-      <a href="/" class="button">
-        <i class="icon-sun-filled"></i>
-        Edit this page on github
-      </a>
-      <div class="buttons">
-        <a href="/" class="button">
-          <i class="icon-sun-filled"></i>
-          Prev
-        </a>
-        <a href="/" class="button">
-          Next
-          <i class="icon-sun-filled"></i>
-        </a>
-      </div>
-    </main> -->
-
-    {{
-      const next = collections.docs.find(t => t.matter.page === matter.page + 1)
-      const prev = collections.docs.find(t => t.matter.page === matter.page - 1)
-    }}
+    {{ nav }} {{ sidebar }}
 
     <main>
       <h1>{{ matter.title }}</h1>
+
       {{ content }}
 
       <br />
+
       <a target="_blank" href="{{ githubLink }}" class="button">
         <i class="icon-pencil"></i>
         Edit this page on github
       </a>
+
       <div class="buttons">
-      {{ 
-        prev ?
-        `<a href="${prev.link}" class="button"><i class="icon-left-open-mini"></i>${prev.matter.title}</a>`
-        : '<span></span>'
-       }}
-
-       {{
-         next ?
-         `<a href="${next.link}" class="button">${next.matter.title}<i class="icon-right-open-mini"></i></a>`
-         : '<span></span>'
-       }}
-        
+        {{
+          prev
+            ? `<a href="${prev.link}" class="button"><i class="icon-left-open-mini"></i>${prev.matter.title}</a>`
+            : "<span></span>"
+        }}
+        <!--  -->
+        {{
+          next
+            ? `<a href="${next.link}" class="button">${next.matter.title}<i class="icon-right-open-mini"></i></a>`
+            : "<span></span>"
+        }}
       </div>
-
     </main>
 
-    <!-- <main>
-      <h1>Quickstart</h1>
-
-      <blockquote>
-        This quick start is not intended for developers who are just getting
-        into ulkajs. For step by step guide to create new ulka project, head to
-        our <a href="/tutorial">tutorial</a>
-      </blockquote>
-
-      <h2># Creating a new project</h2>
-      <pre><code>npm init @ulkajs/app my-app <small># OR yarn create @ulkajs/app my-app</small>
-cd my-app
-npm install <small># OR yarn install</small>
-npx ulka -w <small># OR yarn ulka -w</small></code></pre>
-      <p>
-        Above command will download the default starter from github, install all
-        the dependencies and start the ulka development server.
-      </p>
-
-      <h2># Creating production build</h2>
-      <pre><code>npx ulka <small># OR yarn ulka</small></code></pre>
-      <p>
-        This command builds all the files into build path specified in
-        <code>ulka-config.js</code>
-      </p>
-
-      <br />
-      <a href="/" class="button">
-        <i class="icon-pencil"></i>
-        Edit this page on github
-      </a>
-      <div class="buttons">
-        <a href="/" class="button"><i class="icon-left-open-mini"></i>Prev</a>
-        <a href="/" class="button">Next<i class="icon-right-open-mini"></i></a>
-      </div>
-    </main> -->
-
-    {{ include("../partials/footer.ulka") }}
+    {{ footer }}
   </body>
 </html>

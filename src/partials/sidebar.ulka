@@ -1,30 +1,24 @@
 {{
-function createLi(title, l, links){
-    return `<li>
-        <a class="${ link === l ? `active` : '' }" href="${l}">
-            ${title}
-        </a>
-    ${
-        links ?
-            `<ul>
-                ${links.map(link => createLi(link.title, link.link)).join("")}
-            </ul>`
-        : ""
-    }
+  function createLi(title, l, links) {
+    return /* HTML */ `<li>
+      <a class="${link === l ? `active` : ``}" href="${l}">${title}</a>
+      ${links
+        ? /* HTML */ `<ul>
+            ${links.map((link) => createLi(link.title, link.link)).join("")}
+          </ul>`
+        : ""}
     </li>`
-}
+  }
 }}
 
 <aside class="sidebar" data-responsive-sidebar>
-    <ul>
+  <ul>
     {{
-        collections
-            .docs
-            .map(template => createLi(
-                template.matter.title, 
-                template.link, 
-                template.matter.links
-            )).join("")
+      collections.docs
+        .map((template) =>
+          createLi(template.matter.title, template.link, template.matter.links)
+        )
+        .join("")
     }}
-    </ul>
+  </ul>
 </aside>

@@ -13,5 +13,9 @@
   "private": true,
   "dependencies": {
     "ulka": "^1.0.0"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.2.7",
+    "prettier": "^2.5.1"
   }
 }

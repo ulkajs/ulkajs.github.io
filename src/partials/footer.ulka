@@ -1,14 +1,14 @@
 <footer>
-    <p>Released under MIT License</p>
-    <p>Copyright &copy; 2021-present Roshan Acharya</p>
+  <p>Released under MIT License</p>
+  <p>Copyright &copy; 2021-present Roshan Acharya</p>
 </footer>
 
 <script src="/assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@1.0.0-alpha.28"></script>
 <script>
-    docsearch({
-        container: "#docsearch",
-        apiKey: "89909a28cda0776803f1e51e3c9f3961",
-        indexName: "ulka",
-    });
+  docsearch({
+    container: "#docsearch",
+    apiKey: "89909a28cda0776803f1e51e3c9f3961",
+    indexName: "ulka",
+  });
 </script>
