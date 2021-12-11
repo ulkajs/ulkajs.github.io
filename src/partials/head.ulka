@@ -3,7 +3,6 @@
     '/assets/css/fonts.css',
     '/assets/css/style.css',
     '/assets/css/docsearch.css',
-    '/assets/css/prism.css',
     '/assets/icons/i.css',
     ...(matter.stylesheets || []),
   ]

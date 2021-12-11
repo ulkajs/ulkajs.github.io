@@ -3,9 +3,9 @@ title: Introduction
 page: 1
 links:
   [
-    { title: "Static site generator", href: "#static-site-generator" },
-    { title: "Why SSG", href: "#why-static-site-generator" },
-    { title: "Why Ulka", href: "#why-ulka" },
+    { title: 'Static site generator', href: '#static-site-generator' },
+    { title: 'Why SSG', href: '#why-static-site-generator' },
+    { title: 'Why Ulka', href: '#why-ulka' },
   ]
 ---
 
@@ -63,13 +63,13 @@ Ulka introduces new templating engine `ulka`. This template engine allows you to
 
 Input:
 
-```jsx
+```ulka
 <h1>{{ ["ulka", "js", "is", "awesome"].join(" ") }}</h1>
 ```
 
 Output:
 
-```jsx
+```ulka
 <h1>ulka js is awesome</h1>
 ```
 

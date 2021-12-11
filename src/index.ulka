@@ -1,7 +1,7 @@
 ---
 _layout: main.ulka
 title: Home
-stylesheets: ["/assets/css/index.css"]
+stylesheets: ['/assets/css/index.css']
 ---
 
 <div class="hero">

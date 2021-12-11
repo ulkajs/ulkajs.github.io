@@ -13,7 +13,7 @@
   --heading-margin: 2.5rem 0 1rem;
   --primary-color: #58a6ff;
 
-  --font-family: "Work Sans", sans-serif;
+  --font-family: 'Work Sans', sans-serif;
 }
 
 :root .light {
@@ -175,7 +175,7 @@ code {
   color: var(--code-color);
   padding: 0.25rem;
   border-radius: 0.2rem;
-  font-family: "DM Mono", monospace;
+  font-family: 'DM Mono', monospace;
   font-size: 0.9rem;
 }
 
