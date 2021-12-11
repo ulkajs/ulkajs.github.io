@@ -1,14 +1,14 @@
 {{
   function createLi(title, l, links) {
     const isActive = link === l
-  
+
     return /* HTML */ `<li>
       <a class="${isActive ? `active` : ``}" href="${l}">${title}</a>
       ${links && isActive
         ? /* HTML */ `<ul>
-            ${links.map((link) => createLi(link.title, link.href)).join("")}
+            ${links.map((link) => createLi(link.title, link.href)).join('')}
           </ul>`
-        : ""}
+        : ''}
     </li>`
   }
 }}
@@ -20,7 +20,7 @@
         .map((template) =>
           createLi(template.matter.title, template.link, template.matter.links)
         )
-        .join("")
+        .join('')
     }}
   </ul>
 </aside>

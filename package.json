@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ulka -w",
     "build": "ulka",
-    "format": "node ./scripts/format.js"
+    "format": "ulka-format src/**/**.ulka"
   },
   "repository": "https://github.com/ulkajs/ulkajs.github.io",
   "author": "Roshan Acharya <acharyaroshan2357@gmail.com>",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@sindresorhus/slugify": "^1.1.0",
+    "@ulkajs/format": "^0.0.3",
     "fast-glob": "^3.2.7",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-prism": "^2.2.1",

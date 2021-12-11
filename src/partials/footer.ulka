@@ -7,8 +7,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@1.0.0-alpha.28"></script>
 <script>
   docsearch({
-    container: "#docsearch",
-    apiKey: "89909a28cda0776803f1e51e3c9f3961",
-    indexName: "ulka",
-  });
+    container: '#docsearch',
+    apiKey: '89909a28cda0776803f1e51e3c9f3961',
+    indexName: 'ulka',
+  })
 </script>

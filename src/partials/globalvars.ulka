@@ -1,5 +1,5 @@
 {{
-  const head = include("./head.ulka")
-  const nav = include("./nav.ulka")
-  const footer = include("./footer.ulka")
+  const head = include('./head.ulka')
+  const nav = include('./nav.ulka')
+  const footer = include('./footer.ulka')
 }}

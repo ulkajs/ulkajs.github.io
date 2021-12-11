@@ -1,12 +1,10 @@
-{{ include("../partials/globalvars.ulka") }}
+{{ include('../partials/globalvars.ulka') }}
 
 <!DOCTYPE html>
 <html lang="en">
   {{ head }}
 
-  <!--  -->
-
-  {{ matter.hasSidebar && include("../partials/sidebar.ulka") }}
+  {{ matter.hasSidebar && include('../partials/sidebar.ulka') }}
 
   <body>
     {{ nav }}
