@@ -1,18 +1,18 @@
 const path = require('path')
 const { defineConfig, slugify } = require('ulka')
 const anchor = require('markdown-it-anchor')
-const mdShiki = require('./plugins/shiki-md-plugin')
+const shikiPlugin = require('./plugins/shikiPlugin')
 
-module.exports = defineConfig((ulka) => {
+module.exports = defineConfig(async (ulka) => {
   const md = ulka.engines['.md'].md
-
-  md.set({ html: true }).use(anchor, { slugify }).use(mdShiki)
+  md.set({ html: true }).use(anchor, { slugify })
 
   return {
     input: 'src',
     output: 'dist',
     layout: path.join('src', 'layouts'),
     concurrency: Infinity,
+    plugins: [shikiPlugin],
     contents: {
       main: {
         match: ['index.ulka'],
