@@ -1,7 +1,11 @@
 ---
 title: Configs
 page: 2
-links: [{ title: 'Ulka config file', href: '#ulka-config-file' }]
+links:
+  [
+    { title: 'Ulka config file', href: '#ulka-config-file' },
+    { title: 'Understanding the config', href: '#understanding-the-config' },
+  ]
 ---
 
 ## Ulka config file
@@ -39,3 +43,11 @@ Path from current working directory where all layouts are kept.
 - **plugins**
 
 plugins are described [here](/docs/plugins). Later we will be adding some plugins to our project.
+
+- **contents**
+
+contents is a object which tell ulka where to find the files to to build.
+
+- **copy**
+
+copy accepts a array of globs which tells ulka to copy files to output directory. You can also change where to copy files by providing a object.
