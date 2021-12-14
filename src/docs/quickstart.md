@@ -3,9 +3,9 @@ page: 2
 title: Quickstart
 links:
   [
-    { title: "Creating new project", href: "#creating-new-project" },
-    { title: "Building", href: "#building-static-site" },
-    { title: "Development Server", href: "#development-server" },
+    { title: 'Creating new project', href: '#creating-new-project' },
+    { title: 'Building', href: '#building-static-site' },
+    { title: 'Development Server', href: '#development-server' },
   ]
 ---
 
@@ -14,8 +14,8 @@ links:
 ## Creating new project
 
 ```bash
-npm init @ulkajs/app ulka-site
-cd ulka-site
+npm init ulka <project-name>
+cd <project-name>
 npm install
 ```
 

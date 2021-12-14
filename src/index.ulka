@@ -52,7 +52,7 @@ stylesheets: ['/assets/css/index.css']
 </div>
 
 <pre><code><small># Create new project</small>
-npm init @ulkajs/app my-blog
+npm init ulka my-blog
 <small># Goto project directory</small>
 cd my-blog
 <small># Install dependencies</small>
