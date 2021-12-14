@@ -1,13 +1,14 @@
 @font-face {
-  font-family: "i";
-  src: url("./i.eot?27761574");
-  src: url("./i.eot?27761574#iefix") format("embedded-opentype"),
-    url("./i.woff2?27761574") format("woff2"),
-    url("./i.woff?27761574") format("woff"),
-    url("./i.ttf?27761574") format("truetype"),
-    url("./i.svg?27761574#i") format("svg");
+  font-family: 'i';
+  src: url('./i.eot?27761574');
+  src: url('./i.eot?27761574#iefix') format('embedded-opentype'),
+    url('./i.woff2?27761574') format('woff2'),
+    url('./i.woff?27761574') format('woff'),
+    url('./i.ttf?27761574') format('truetype'),
+    url('./i.svg?27761574#i') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
@@ -19,9 +20,9 @@
   }
 }
 */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "i";
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'i';
   font-style: normal;
   font-weight: normal;
 
@@ -55,29 +56,29 @@
 }
 
 .icon-sun-inv:before {
-  content: "\e800";
+  content: '\e800';
 } /* '' */
 .icon-moon-inv:before {
-  content: "\e801";
+  content: '\e801';
 } /* '' */
 .icon-left-open-mini:before {
-  content: "\e802";
+  content: '\e802';
 } /* '' */
 .icon-right-open-mini:before {
-  content: "\e803";
+  content: '\e803';
 } /* '' */
 .icon-pencil:before {
-  content: "\e804";
+  content: '\e804';
 } /* '' */
 .icon-cancel:before {
-  content: "\e805";
+  content: '\e805';
 } /* '' */
 .icon-link-ext:before {
-  content: "\f08e";
+  content: '\f08e';
 } /* '' */
 .icon-github-circled:before {
-  content: "\f09b";
+  content: '\f09b';
 } /* '' */
 .icon-menu:before {
-  content: "\f0c9";
+  content: '\f0c9';
 } /* '' */

@@ -17,10 +17,6 @@ main > pre {
   padding: 2rem 0;
 }
 
-.hero img {
-  width: 7rem;
-}
-
 .hero div:first-child {
   margin-bottom: 1rem;
 }
@@ -37,9 +33,10 @@ main > pre {
   text-align: center;
 }
 
-.highlights h5 {
+.highlights .highlight-title {
   color: var(--primary-color);
   font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .highlights p {

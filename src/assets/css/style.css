@@ -210,10 +210,6 @@ nav .container {
   align-items: center;
 }
 
-.nav-logo img {
-  height: 2rem;
-}
-
 nav a {
   border-bottom: none;
 }
@@ -344,7 +340,6 @@ pre small {
     border-left: 0.05rem solid var(--hr-color);
     width: var(--responsive-sidebar-width) !important;
     padding: 1rem;
-    transition: transform 0.2s;
   }
 
   .nav-items:first-of-type li {

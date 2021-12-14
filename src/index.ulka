@@ -6,7 +6,12 @@ stylesheets: ['/assets/css/index.css']
 
 <div class="hero">
   <div>
-    <img class="hero-logo" src="/assets/images/ulka-logo.svg" alt="ulka logo" />
+    <img
+      style="width: 7rem"
+      class="hero-logo"
+      src="/assets/images/ulka-logo.svg"
+      alt="ulka logo"
+    />
   </div>
   <div>
     <h1>Ulka</h1>
@@ -16,8 +21,8 @@ stylesheets: ['/assets/css/index.css']
     </p>
 
     <div class="buttons">
-      <a class="button">Get Started</a>
-      <a class="button">
+      <a class="button" href="/docs">Get Started</a>
+      <a class="button" rel="noreferrer" href="https://github.com/ulkajs/ulka">
         Github
         <i class="icon-github-circled"></i>
       </a>
@@ -29,21 +34,21 @@ stylesheets: ['/assets/css/index.css']
 
 <div class="highlights">
   <div>
-    <h5>Blazing Fast</h5>
+    <div class="highlight-title">Blazing Fast</div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
       voluptas.
     </p>
   </div>
   <div>
-    <h5>Pluggable</h5>
+    <div class="highlight-title">Pluggable</div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
       voluptas.
     </p>
   </div>
   <div>
-    <h5>Lightweight</h5>
+    <div class="highlight-title">Lightweight</div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
       voluptas.

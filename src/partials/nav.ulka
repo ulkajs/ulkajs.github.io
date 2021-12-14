@@ -5,6 +5,7 @@
         class="nav-logo-image"
         src="/assets/images/ulka-logo-name.svg"
         alt="ulka-logo"
+        style="height: 2rem"
       />
     </a>
     <div style="display: flex">
@@ -26,12 +27,16 @@
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://github.com/ulkajs/ulka">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/ulkajs/ulka"
+          >
             Github<i class="icon-link-ext"></i>
           </a>
         </li>
         <li>
-          <button class="theme-toggler">
+          <button aria-label="Toggle Theme" class="theme-toggler">
             <i class="icon-sun-inv"></i>
             <i class="icon-moon-inv"></i>
           </button>
@@ -42,7 +47,7 @@
           <div id="docsearch"></div>
         </li>
         <li>
-          <button class="sidebar-toggler">
+          <button aria-label="Toggle Sidebar" class="sidebar-toggler">
             <i class="icon-menu"></i>
             <i class="icon-cancel hide"></i>
           </button>
