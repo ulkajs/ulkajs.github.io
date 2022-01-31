@@ -20,15 +20,16 @@ module.exports = defineConfig(async (ulka) => {
       docs: content(ulka, 'docs/**.md'),
       tutorial: content(ulka, 'tutorial/**.md'),
     },
-    copy: {
-      match: ['static/{**,.**}/**', 'assets/**'],
-      output: (p) => {
-        if (p.startsWith(path.join(ulka.configs.output, 'assets'))) return p
-
-        const pth = path.relative(path.join(ulka.configs.output, 'static'), p)
-        return path.join(ulka.configs.output, pth)
+    copy: [
+      'assets/**',
+      {
+        match: 'static/{**,.**}/**',
+        output: (p) => {
+          const pth = path.relative(path.join(ulka.configs.output, 'static'), p)
+          return path.join(ulka.configs.output, pth)
+        },
       },
-    },
+    ],
   }
 })
 

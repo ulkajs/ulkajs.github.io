@@ -20,7 +20,7 @@ langs.push({
  */
 const plugin = () => {
   return {
-    async afterSetup({ ulka }) {
+    async beforeBuild({ ulka }) {
       const md = ulka.engines['.md'].md
       const highlighter = await shiki.getHighlighter({
         langs,
