@@ -1,32 +1,21 @@
 {
   "name": "ulkajs.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "documentation website",
   "main": "index.js",
   "scripts": {
-    "develop": "ulka develop",
-    "serve": "ulka serve",
-    "build": "ulka build",
-    "deploy": "gh-pages -d build -t true"
+    "dev": "ulka -w",
+    "build": "ulka",
+    "format": "ulka-format src/**/**.ulka"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ulkajs/ulkajs.github.io.git"
-  },
-  "author": "Roshan Acharya",
+  "repository": "https://github.com/ulkajs/ulkajs.github.io",
+  "author": "Roshan Acharya <acharyaroshan2357@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ulkajs/ulkajs.github.io/issues"
-  },
-  "homepage": "https://github.com/ulkajs/ulkajs.github.io#readme",
+  "private": true,
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "ulka": "^0.6.8-rc.2"
-  },
-  "dependencies": {
-    "ulka-plugin-autolink-headers": "^1.1.2",
-    "ulka-plugin-minifier": "^1.0.2-s",
-    "ulka-plugin-sitemap": "^1.1.1",
-    "ulka-source-ejs": "^1.2.0"
+    "@ulkajs/format": "^0.0.3",
+    "markdown-it-anchor": "^8.4.1",
+    "shiki": "^0.14.3",
+    "ulka": "^1.0.0"
   }
 }

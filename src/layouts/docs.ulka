@@ -1,0 +1,36 @@
+---
+_layout: main.ulka
+stylesheets: ['/assets/css/docs.css']
+hasSidebar: true
+---
+
+{{
+  const next = collections[name].find((t) => t.matter.page === matter.page + 1)
+  const prev = collections[name].find((t) => t.matter.page === matter.page - 1)
+
+  const prevEl = prev
+    ? /* HTML */ `<a href="${prev.link}" class="button">
+        <i class="icon-left-open-mini"></i>
+        ${prev.matter.title}
+      </a>`
+    : /* HTML */ `<span></span>`
+
+  const nextEl = next
+    ? /* HTML */ `<a href="${next.link}" class="button">
+        ${next.matter.title}
+        <i class="icon-right-open-mini"></i>
+      </a>`
+    : /* HTML */ `<span></span>`
+}}
+
+<h1>{{ matter.title }}</h1>
+
+{{ content }}
+
+<br />
+<a target="_blank" href="{{ githubLink }}" class="button">
+  <i class="icon-pencil"></i>
+  Edit this page on github
+</a>
+
+<div class="buttons">{{ prevEl + nextEl }}</div>

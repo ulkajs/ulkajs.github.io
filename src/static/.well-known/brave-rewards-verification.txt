@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ulka.js.org
+Token: 172b0175ebc6a5cb1ec1dbaa8d0f94691393f06869037dbfd0cd0482669e608c

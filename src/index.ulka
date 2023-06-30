@@ -1,0 +1,69 @@
+---
+_layout: main.ulka
+title: Home
+stylesheets: ['/assets/css/index.css']
+---
+
+<div class="hero">
+  <div>
+    <img
+      style="width: 7rem"
+      class="hero-logo"
+      src="/assets/images/ulka-logo.svg"
+      alt="ulka logo"
+    />
+  </div>
+  <div>
+    <h1>Ulka</h1>
+    <p>
+      A fast, pluggable and lightweight static site generator written in
+      javascript.
+    </p>
+
+    <div class="buttons">
+      <a class="button" href="/docs">Get Started</a>
+      <a class="button" rel="noreferrer" href="https://github.com/ulkajs/ulka">
+        Github
+        <i class="icon-github-circled"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="highlights">
+  <div>
+    <div class="highlight-title">Blazing Fast</div>
+    <p>
+      Ulka accelerates website deployment with its lightning-speed build
+      process.
+    </p>
+  </div>
+  <div>
+    <div class="highlight-title">Pluggable</div>
+    <p>
+      Ulka's modular design allows easy integration of plugins, expanding its
+      functionality.
+    </p>
+  </div>
+  <div>
+    <div class="highlight-title">Lightweight</div>
+    <p>
+      Ulka bundles libraries using Rollup for faster installation, saving you
+      time and storage space.
+    </p>
+  </div>
+</div>
+
+<pre><code><small># Create new project</small>
+npm init ulka my-blog
+<small># Goto project directory</small>
+cd my-blog
+<small># Install dependencies</small>
+npm install 
+<small># Build</small>
+npx ulka
+<small># Build and watch</small>
+npx ulka -w</code></pre>
+<br />

@@ -1,0 +1,13 @@
+{{ const { tags } = require('../../data/meta-tags.js') }}
+
+{{
+  tags
+    .map((prop) => {
+      const key = prop.name ? 'name' : 'property'
+      const value = prop[key]
+      const content = prop.content
+
+      return /* HTML */ `<meta ${key}="${value}" content="${content}" />`
+    })
+    .join('\n')
+}}

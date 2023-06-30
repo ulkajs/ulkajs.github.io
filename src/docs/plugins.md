@@ -1,64 +1,49 @@
 ---
-title: 'Plugins'
-page: 3
+page: 5
+title: Plugins
 links:
-  - title: 'What are ulka plugins ?'
-    link: '#what-are-ulka-plugins'
-  - title: 'Using ulka plugins'
-    link: '#using-ulka-plugins'
-  - title: 'Passing options to plugins'
-    link: '#passing-options-to-plugins'
+  [
+    { title: 'What are plugins', href: '#what-are-plugins' },
+    { title: 'Using plugins', href: '#using-plugins' },
+  ]
 ---
 
-## What are ulka plugins ?
+## What are plugins ?
 
-Ulka plugins are scripts that lets you to customize the data and the site. Ulkajs makes it more easier to add, modify or delete data.
+Plugins are powerful extensions that enhance the functionality of Ulka. They allow you to customize and modify the site generation process at specific stages.
 
-<br />
+## Using plugins
 
-## Using ulka plugins
+Using ulka plugins is very straight forward. All you need to do is pass the plugin to the plugins array in `ulka-config.js`
 
-Using ulka plugins is very straight forward. All you need to do is download the plugin and pass it to the plugins array in `ulka-config.js`
-
-For eg: <br />
-If you want to generate sitemap for your site, then there is a plugin for ulka called `ulka-plugin-sitemap`
-
-To install it run the following command in root directory of your project.
-
-```
-npm i ulka-plugin-sitemap
-```
-
-Then in your `ulka-config.js` add `ulka-plugin-sitemap` to the plugins array
+#### Passing plugin as a string
 
 ```js
-// ulka-config.js
+module.exports = {
+  plugins: [
+    '@ulkajs/plugin-tags',
+    // or
+    {
+      plugin: '@ulkajs/plugin-tags',
+      options: { matterKey: '_tags' },
+    },
+  ],
+}
+```
+
+#### Passing plugin as a function
+
+```js
+const _tagsPlugin = require('@ulkajs/plugin-tags')
+
+const tagsPlugin = () => _tagsPlugin({ matterKey: '_tags' })
 
 module.exports = {
-    ...
-    plugins: [`ulka-plugin-sitemap`]
+  plugins: [tagsPlugin],
 }
 ```
 
 <br />
+Plugins in Ulka offer a flexible and customizable way to enhance its functionality. Whether using pre-existing plugins from the npm ecosystem or creating your own custom plugins, you can extend Ulka's capabilities and tailor the site generation process to meet your specific requirements. By exploring the available plugins and experimenting with different options, you can unlock the full potential of Ulka and create remarkable static websites.
 
-## Passing options to plugins
-
-Some plugins accepts options from the users. In that case you can pass the object and pass the name of plugins in the `resolve` key and options in the `options` key.
-
-```js
-// ulka-config.js
-
-module.exports = {
-    ...
-    plugins: [
-        {
-            resolve: `ulka-plugin-sitemap`,
-            options: {
-                lastmod: true,
-            }
-        }
-    ]
-}
-
-```
+<br />

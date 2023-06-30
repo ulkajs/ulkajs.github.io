@@ -1,53 +1,46 @@
 ---
-title: 'Quickstart'
 page: 2
+title: Quickstart
 links:
-  - title: 'Creating a new project'
-    link: '#creating-a-new-project'
-  - title: 'Creating production build'
-    link: '#creating-production-build'
-  - title: 'Installing ulka globally'
-    link: '#installing-ulka-globally'
+  [
+    { title: 'Creating new project', href: '#creating-new-project' },
+    { title: 'Building', href: '#building-static-site' },
+    { title: 'Development Server', href: '#development-server' },
+  ]
 ---
 
-> This quick start is not intended for developers who are just getting into ulkajs. For step by step guide to create new ulka project, head to our [tutorial](/tutorial)!
+## Requirements
 
-<br />
+- Nodejs
 
-## Creating a new project
+  Visit [https://nodejs.org/](https://nodejs.org/) and download nodejs labelled as with LTS.
 
-```bash
-npx ulka create ulka-site ulkajs/ulka-starter-default -i npm
+- Editor
 
-cd ulka-site
+  For efficient code writing, a recommended editor is [Visual Studio Code (VSCode)](https://code.visualstudio.com/). To enhance productivity and readability specifically for Ulka code, the [Ulka extension](https://marketplace.visualstudio.com/items?itemName=Roshan.ulka-language-support) for VSCode offers code highlighting and formatting capabilities.
 
-npm run develop # OR npx ulka develop
-```
-
-Above command will download the default starter from github, install all the dependencies and start the ulka development server.
-
-<br />
-
-## Creating production build
+## Creating new project
 
 ```bash
-npm run build # OR npx ulka build
+npm init ulka <project-name>
+cd <project-name>
+npm install
 ```
 
-This command builds all the files into build path specified in `ulka-config.js`
+Above command will generate a basic template install all the dependencies.
 
-**Serving production build**
+## Building static site
 
 ```bash
-npm run serve # OR npx ulka serve
+npx ulka
 ```
 
-<br />
+Above command builds all the files into output path specified in `ulka-config.js`.
 
-## Installing ulka globally
-
-You can install ulka globally but it is not recommended as ulka is not completely ready and new versions with betters features will be released in shortly. You would never want to miss those, would you ?. If yes 😠 please go ahead and run the following command.
+## Development server
 
 ```bash
-npm i -g ulka
+npx ulka -w
 ```
+
+Above command build, create live development server and watch files.

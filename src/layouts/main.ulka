@@ -1,0 +1,18 @@
+{{ include('../partials/globalvars.ulka') }}
+
+<!DOCTYPE html>
+<html lang="en">
+  {{ head }}
+
+  {{ matter.hasSidebar && include('../partials/sidebar.ulka') }}
+
+  <body>
+    {{ nav }}
+
+    <div style="display: none" class="backdrop"></div>
+
+    <main class="{{ link === `/` ? `container` : `` }}">{{ content }}</main>
+
+    {{ footer }}
+  </body>
+</html>
