@@ -17,7 +17,8 @@
 }
 
 :root .light {
-  --body-bg: #f7f7f7;
+  /* --body-bg: #f7f7f7; */
+  --body-bg: whitesmoke;
   --body-color: #111;
 
   --quote-color: var(--body-color);
@@ -35,7 +36,8 @@
 }
 
 :root .dark {
-  --body-bg: #0f0f0f;
+  /* --body-bg: #0f0f0f; */
+  --body-bg: #202123;
   --body-color: #d2d2d2;
   --quote-color: var(--body-color);
   --quote-bg: var(--body-bg);

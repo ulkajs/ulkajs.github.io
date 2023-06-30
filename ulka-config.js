@@ -18,7 +18,7 @@ module.exports = defineConfig(async (ulka) => {
         match: ['index.ulka'],
       },
       docs: content(ulka, 'docs/**.md'),
-      tutorial: content(ulka, 'tutorial/**.md'),
+      plugins: content(ulka, 'plugins/**.md'),
     },
     copy: [
       'assets/**',

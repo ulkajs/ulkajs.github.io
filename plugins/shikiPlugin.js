@@ -19,18 +19,19 @@ langs.push({
  * @type {import("ulka").Plugin}
  */
 const plugin = () => {
+  const theme = 'material-theme-palenight'
   return {
     async beforeBuild({ ulka }) {
       const md = ulka.engines['.md'].md
       const highlighter = await shiki.getHighlighter({
         langs,
-        themes: ['nord'],
+        themes: [theme],
       })
 
       md.options.highlight = (code, lang) => {
         return highlighter.codeToHtml(code, {
           lang: lang || 'text',
-          theme: 'nord',
+          theme,
         })
       }
     },

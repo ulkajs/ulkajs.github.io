@@ -36,22 +36,22 @@ stylesheets: ['/assets/css/index.css']
   <div>
     <div class="highlight-title">Blazing Fast</div>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-      voluptas.
+      Ulka accelerates website deployment with its lightning-speed build
+      process.
     </p>
   </div>
   <div>
     <div class="highlight-title">Pluggable</div>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-      voluptas.
+      Ulka's modular design allows easy integration of plugins, expanding its
+      functionality.
     </p>
   </div>
   <div>
     <div class="highlight-title">Lightweight</div>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-      voluptas.
+      Ulka bundles libraries using Rollup for faster installation, saving you
+      time and storage space.
     </p>
   </div>
 </div>

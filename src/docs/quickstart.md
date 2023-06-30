@@ -9,7 +9,15 @@ links:
   ]
 ---
 
-> This quick start is not intended for developers who are new to ulka. For step by step guide, head to our [tutorial](/tutorial)
+## Requirements
+
+- Nodejs
+
+  Visit [https://nodejs.org/](https://nodejs.org/) and download nodejs labelled as with LTS.
+
+- Editor
+
+  For efficient code writing, a recommended editor is [Visual Studio Code (VSCode)](https://code.visualstudio.com/). To enhance productivity and readability specifically for Ulka code, the [Ulka extension](https://marketplace.visualstudio.com/items?itemName=Roshan.ulka-language-support) for VSCode offers code highlighting and formatting capabilities.
 
 ## Creating new project
 
