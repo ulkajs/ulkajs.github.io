@@ -1,1 +1,281 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Home | Ulka</title> <meta name="title" content="Ulka Js"> <meta name="description" content="A simpler static site generator written in JavaScript to transform static data to html."> <meta name="robots" content="index, follow"> <meta property="og:type" content="website"> <meta property="og:url" content="https://ulka.js.org"> <meta property="og:title" content="Ulka Js"> <meta property="og:description" content="A simpler static site generator written in JavaScript to transform static data to html."> <meta property="og:image" content="https://ulka.js.org/ulka_og.jpeg"> <meta property="twitter:card" content="summary_large_image"> <meta name="twitter:creator" content="@coderosh"> <meta property="twitter:url" content="https://ulka.js.org"> <meta property="twitter:title" content="Ulka Js"> <meta property="twitter:description" content="A simpler static site generator written in JavaScript to transform static data to html."> <meta property="twitter:image" content="https://ulka.js.org/ulka_og.jpeg"> <meta name="google-site-verification" content="0jWi1-tMAYKjyt0F_cJ_B-kws1SVDzPcq0PpAqDIRK8"> <link rel="shortcut icon" href="./logo.png" type="image/x-icon"> <link rel="stylesheet" href="/__assets__/a2b57ebcee531af175a9451a1fddbb9f06c92bcf.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN1005FJGL"></script> <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-RN1005FJGL")</script> <style>@font-face{font-family:'Ubuntu Mono';font-style:normal;font-weight:400;font-display:swap;src:local('Ubuntu Mono'),local('UbuntuMono-Regular'),url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc3CsTKlA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Ubuntu Mono';font-style:normal;font-weight:400;font-display:swap;src:local('Ubuntu Mono'),local('UbuntuMono-Regular'),url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc-CsTKlA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Ubuntu Mono';font-style:normal;font-weight:400;font-display:swap;src:local('Ubuntu Mono'),local('UbuntuMono-Regular'),url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc2CsTKlA.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Ubuntu Mono';font-style:normal;font-weight:400;font-display:swap;src:local('Ubuntu Mono'),local('UbuntuMono-Regular'),url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc5CsTKlA.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Ubuntu Mono';font-style:normal;font-weight:400;font-display:swap;src:local('Ubuntu Mono'),local('UbuntuMono-Regular'),url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc0CsTKlA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Ubuntu Mono';font-style:normal;font-weight:400;font-display:swap;src:local('Ubuntu Mono'),local('UbuntuMono-Regular'),url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:local('DM Sans Regular'),local('DMSans-Regular'),url(https://fonts.gstatic.com/s/dmsans/v5/rP2Hp2ywxg089UriCZ2IHSeH.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:local('DM Sans Regular'),local('DMSans-Regular'),url(https://fonts.gstatic.com/s/dmsans/v5/rP2Hp2ywxg089UriCZOIHQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:local('DM Sans Medium'),local('DMSans-Medium'),url(https://fonts.gstatic.com/s/dmsans/v5/rP2Cp2ywxg089UriAWCrCBamC2QX.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:local('DM Sans Medium'),local('DMSans-Medium'),url(https://fonts.gstatic.com/s/dmsans/v5/rP2Cp2ywxg089UriAWCrCBimCw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style> <link rel="stylesheet" href="/__assets__/1104abe17ffafe56ad480f78c1534aa3c0b8813b.css"> <style>.homepage{display:flex;flex-direction:column;text-align:center;min-height:calc(100vh - 120px);align-items:center;justify-content:center}.homepage .home-text{max-width:450px;padding:0 10px;font-weight:400;font-size:15px}.homepage .home-head{font-size:50px;padding:0;margin:10px 0}.installation{margin:20px 0}.installation img{max-width:400px;width:100%}footer{text-align:center;height:60px;display:flex;align-items:center;justify-content:center;background:var(--heavy-background-color)}.sidebar{position:fixed;margin:0;top:60px;height:calc(100vh - 60px);overflow-y:auto;padding:40px 0;background:var(--heavy-background-color);min-width:300px;right:-400px;transition:right .5s;z-index:20}.sidebar .nav-link{margin-left:0}@media (max-width:700px){nav .nav-links{display:none}.toggle-sidebar{display:block;padding-left:20px}}</style> </head> <body class="light"> <nav> <div class="container"> <a href="/" class="nav-logo"> <img src="/logo.png" alt="ulka logo"> <span>Ulka</span> </a> <div style="display:flex;align-items:center"> <ul class="nav-links"> <li class="nav-link"> <a href="/docs"> Docs </a> </li> <li class="nav-link"> <a href="/tutorial"> Tutorial </a> </li> <li class="nav-link"> <a href="https://github.com/ulkajs/ulka"> Github </a> </li> <li class="nav-link"> <button onclick="toggleTheme()" class="toggle-mode"></button> </li> </ul> <span id="docsearch"></span> <div class="toggle-sidebar"> <svg fill="currentColor" viewBox="0 0 60 44" width="25" height="25"> <rect y="0" width="65" height="7"></rect> <rect y="20" width="65" height="7"></rect> <rect y="40" width="65" height="7"></rect> </svg> </div> </div> </div> </nav> <main> <div class="sidebar"> <ul class="sidebar-nav"> <li class="nav-link"> <a href="/">Home</a> </li> <li class="nav-link"> <a href="/docs"> Docs </a> </li> <li class="nav-link"> <a href="/tutorial"> Tutorial </a> </li> <li class="nav-link"> <a href="https://github.com/ulkajs/ulka"> Github </a> </li> <li class="nav-link"> <button onclick="toggleTheme()" class="toggle-mode">h</button> </li> </ul> </div> <div class="homepage"> <img src="./logo.png" alt="logo" width="100"> <h1 class="home-head">ulkajs</h1> <p class="home-text"> A simpler static site generator written in JavaScript to transform static data to html. </p> <div class="installation"> <img src="/__assets__/cd41b963b8961a551f645b5d31d0a32e459f4424.png" alt="installation"> </div> </div> <footer>ulkajs &copy; 2021</footer> <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@1.0.0-alpha.28"></script> <script>docsearch({container:"#docsearch",apiKey:"89909a28cda0776803f1e51e3c9f3961",indexName:"ulka"})</script> </main> <script>const themeTogglers=document.querySelectorAll(".toggle-mode");function findTheme(){let e=localStorage.getItem("theme");return["dark","light"].includes(e)?e:"dark"}function setTheme(e){document.body.className=e,themeTogglers.forEach(t=>{t.textContent="light"===e?"🌙":"🌕"}),localStorage.setItem("theme",e)}function toggleTheme(){setTheme("light"===findTheme()?"dark":"light")}setTheme(findTheme())</script> <script>const sidebar=document.querySelector(".sidebar"),toggler=document.querySelector(".toggle-sidebar");toggler.addEventListener("click",e=>{sidebar.classList.toggle("right-0")})</script> <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.1.0/quicklink.umd.js"></script> <script>window.addEventListener("load",()=>{quicklink.listen()})</script> </body> </html> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+<meta name="title" content="Ulka Js" />
+<meta name="description" content="A fast, pluggable and lightweight static site generator written in javascript." />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ulka.js.org" />
+<meta property="og:title" content="Ulka Js" />
+<meta property="og:description" content="A fast, pluggable and lightweight static site generator written in javascript." />
+<meta property="og:image" content="https://ulka.js.org/assets/meta-image.jpeg" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@coderosh" />
+<meta property="twitter:url" content="https://ulka.js.org" />
+<meta property="twitter:title" content="Ulka Js" />
+<meta property="twitter:description" content="A fast, pluggable and lightweight static site generator written in javascript." />
+<meta property="twitter:image" content="https://ulka.js.org/assets/meta-image.jpeg" />
+
+  <style>
+  /* Work Sans */
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_c6Dpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+      U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_fKDp.woff2)
+      format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_c6Dpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+      U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_fKDp.woff2)
+      format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* DM MONO */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v5/aFTU7PB1QTsUX8KYthSQBLyM.woff2)
+      format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v5/aFTU7PB1QTsUX8KYthqQBA.woff2)
+      format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+</style>
+
+
+  <link rel="stylesheet" href="/assets/css/style.css" /><link rel="stylesheet" href="/assets/css/docsearch.css" /><link rel="stylesheet" href="/assets/icons/i.css" /><link rel="stylesheet" href="/assets/css/index.css" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>Home | Ulka</title>
+</head>
+
+
+  
+
+  <body>
+    <nav>
+  <div class="container">
+    <a href="/" class="nav-logo">
+      <img
+        class="nav-logo-image"
+        src="/assets/images/ulka-logo-name.svg"
+        alt="ulka-logo"
+        style="height: 2rem"
+      />
+    </a>
+    <div style="display: flex">
+      <ul class="nav-items" data-responsive-sidebar>
+        <li>
+          <a
+            class=""
+            href="/docs"
+          >
+            Docs
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/plugins"
+          >
+            Plugins
+          </a>
+        </li>
+        <li>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/ulkajs/ulka"
+          >
+            Github<i class="icon-link-ext"></i>
+          </a>
+        </li>
+        <li>
+          <button aria-label="Toggle Theme" class="theme-toggler">
+            <i class="icon-sun-inv"></i>
+            <i class="icon-moon-inv"></i>
+          </button>
+        </li>
+      </ul>
+      <ul class="nav-items">
+        <li>
+          <div id="docsearch"></div>
+        </li>
+        <li>
+          <button aria-label="Toggle Sidebar" class="sidebar-toggler">
+            <i class="icon-menu"></i>
+            <i class="icon-cancel hide"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div style="display: none" class="backdrop"></div>
+
+    <main class="container">
+<div class="hero">
+  <div>
+    <img
+      style="width: 7rem"
+      class="hero-logo"
+      src="/assets/images/ulka-logo.svg"
+      alt="ulka logo"
+    />
+  </div>
+  <div>
+    <h1>Ulka</h1>
+    <p>
+      A fast, pluggable and lightweight static site generator written in
+      javascript.
+    </p>
+
+    <div class="buttons">
+      <a class="button" href="/docs">Get Started</a>
+      <a class="button" rel="noreferrer" href="https://github.com/ulkajs/ulka">
+        Github
+        <i class="icon-github-circled"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="highlights">
+  <div>
+    <div class="highlight-title">Blazing Fast</div>
+    <p>
+      Ulka accelerates website deployment with its lightning-speed build
+      process.
+    </p>
+  </div>
+  <div>
+    <div class="highlight-title">Pluggable</div>
+    <p>
+      Ulka's modular design allows easy integration of plugins, expanding its
+      functionality.
+    </p>
+  </div>
+  <div>
+    <div class="highlight-title">Lightweight</div>
+    <p>
+      Ulka bundles libraries using Rollup for faster installation, saving you
+      time and storage space.
+    </p>
+  </div>
+</div>
+
+<pre><code><small># Create new project</small>
+npm init ulka my-blog
+<small># Goto project directory</small>
+cd my-blog
+<small># Install dependencies</small>
+npm install 
+<small># Build</small>
+npx ulka
+<small># Build and watch</small>
+npx ulka -w</code></pre>
+<br />
+</main>
+
+    <footer>
+  <p>Released under MIT License</p>
+  <p>Copyright &copy; 2021-present Roshan Acharya</p>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@1.0.0-alpha.28"></script>
+<script>
+  docsearch({
+    container: '#docsearch',
+    apiKey: '89909a28cda0776803f1e51e3c9f3961',
+    indexName: 'ulka',
+  })
+</script>
+
+
+    <script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        quicklink.listen()
+      })
+    </script>
+
+  </body>
+</html>

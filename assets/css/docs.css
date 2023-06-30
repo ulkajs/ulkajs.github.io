@@ -1,0 +1,113 @@
+:root {
+  --sidebar-width: 17rem;
+}
+
+.sidebar {
+  padding: 5rem 0;
+  width: var(--sidebar-width);
+  border-right: 1px solid var(--hr-color);
+  position: fixed;
+  height: 100%;
+  z-index: 5;
+  background: var(--body-bg);
+  overflow: auto;
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  border-bottom: none;
+  color: var(--body-color);
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  color: var(--primary-color);
+}
+
+body > footer {
+  width: calc(100% - var(--sidebar-width));
+  left: 17rem;
+}
+
+main {
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  margin-left: var(--sidebar-width);
+}
+
+.sidebar li ul {
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.sidebar li ul li {
+  margin: 0rem !important;
+  padding: 0rem !important;
+  list-style-type: circle;
+  line-height: 1.3rem;
+}
+
+.sidebar li ul li a {
+  font-size: 0.85rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.buttons .button {
+  display: flex;
+  align-items: center;
+}
+
+.button i.icon-left-open-mini,
+.button i.icon-right-open-mini {
+  font-size: 1.35rem;
+  height: 1.2rem !important;
+  display: flex;
+}
+
+.button i.icon-left-open-mini::before,
+.button i.icon-right-open-mini::before {
+  margin: 0rem !important;
+  width: 0.8rem;
+}
+
+.button i.icon-left-open-mini::before {
+  text-align: left;
+}
+
+.button i.icon-right-open-mini::before {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sidebar-width: 15rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    z-index: 20;
+    padding: 0rem;
+    height: calc(100% - 15.5rem);
+    top: 11rem;
+    border-top: 0.05rem solid var(--hr-color);
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  body > footer {
+    left: 0;
+    width: 100%;
+  }
+}

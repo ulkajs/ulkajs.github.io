@@ -1,0 +1,355 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+<meta name="title" content="Ulka Js" />
+<meta name="description" content="A fast, pluggable and lightweight static site generator written in javascript." />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ulka.js.org" />
+<meta property="og:title" content="Ulka Js" />
+<meta property="og:description" content="A fast, pluggable and lightweight static site generator written in javascript." />
+<meta property="og:image" content="https://ulka.js.org/assets/meta-image.jpeg" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@coderosh" />
+<meta property="twitter:url" content="https://ulka.js.org" />
+<meta property="twitter:title" content="Ulka Js" />
+<meta property="twitter:description" content="A fast, pluggable and lightweight static site generator written in javascript." />
+<meta property="twitter:image" content="https://ulka.js.org/assets/meta-image.jpeg" />
+
+  <style>
+  /* Work Sans */
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_c6Dpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+      U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_fKDp.woff2)
+      format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_c6Dpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+      U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2)
+      format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/worksans/v13/QGYsz_wNahGAdqQ43Rh_fKDp.woff2)
+      format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* DM MONO */
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v5/aFTU7PB1QTsUX8KYthSQBLyM.woff2)
+      format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dmmono/v5/aFTU7PB1QTsUX8KYthqQBA.woff2)
+      format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+</style>
+
+
+  <link rel="stylesheet" href="/assets/css/style.css" /><link rel="stylesheet" href="/assets/css/docsearch.css" /><link rel="stylesheet" href="/assets/icons/i.css" /><link rel="stylesheet" href="/assets/css/docs.css" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>Ulka Syntax | Ulka</title>
+</head>
+
+
+  
+
+<aside class="sidebar" data-responsive-sidebar>
+  <ul>
+    <li>
+      <a class="" href="/docs/">Introduction</a>
+      
+    </li><li>
+      <a class="" href="/docs/quickstart/">Quickstart</a>
+      
+    </li><li>
+      <a class="active" href="/docs/template-engine/">Ulka Syntax</a>
+      <ul>
+            <li>
+      <a class="" href="#variables">Variables</a>
+      
+    </li><li>
+      <a class="" href="#loops">Loops</a>
+      
+    </li><li>
+      <a class="" href="#conditionals">Conditionals</a>
+      
+    </li><li>
+      <a class="" href="#importing">Importing</a>
+      
+    </li><li>
+      <a class="" href="#using-require">Using require</a>
+      
+    </li>
+          </ul>
+    </li><li>
+      <a class="" href="/docs/ulka-config/">Ulka Config</a>
+      
+    </li><li>
+      <a class="" href="/docs/plugins/">Plugins</a>
+      
+    </li><li>
+      <a class="" href="/docs/special-matter-keys/">Special Keys</a>
+      
+    </li>
+  </ul>
+</aside>
+
+
+  <body>
+    <nav>
+  <div class="container">
+    <a href="/" class="nav-logo">
+      <img
+        class="nav-logo-image"
+        src="/assets/images/ulka-logo-name.svg"
+        alt="ulka-logo"
+        style="height: 2rem"
+      />
+    </a>
+    <div style="display: flex">
+      <ul class="nav-items" data-responsive-sidebar>
+        <li>
+          <a
+            class="active"
+            href="/docs"
+          >
+            Docs
+          </a>
+        </li>
+        <li>
+          <a
+            class=""
+            href="/plugins"
+          >
+            Plugins
+          </a>
+        </li>
+        <li>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/ulkajs/ulka"
+          >
+            Github<i class="icon-link-ext"></i>
+          </a>
+        </li>
+        <li>
+          <button aria-label="Toggle Theme" class="theme-toggler">
+            <i class="icon-sun-inv"></i>
+            <i class="icon-moon-inv"></i>
+          </button>
+        </li>
+      </ul>
+      <ul class="nav-items">
+        <li>
+          <div id="docsearch"></div>
+        </li>
+        <li>
+          <button aria-label="Toggle Sidebar" class="sidebar-toggler">
+            <i class="icon-menu"></i>
+            <i class="icon-cancel hide"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <div style="display: none" class="backdrop"></div>
+
+    <main class="">
+
+
+<h1>Ulka Syntax</h1>
+
+<p>
+You can use any template engine you like. But ulka introduces new template engine <code>@ulkajs/template-engine</code>. This template engine is specially made for javascript developers. This template engine allows you to write javascript inside double curly brackets<code>{{}}</code>.</p>
+<p>If you use vscode, I recommend you to download <a href="https://marketplace.visualstudio.com/items?itemName=Roshan.ulka-language-support">vscode-ulka</a> extension. This extension will highlight and format code written inside <code>*.ulka</code> files.</p>
+<h2 id="variables" tabindex="-1">Variables</h2>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> name </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Roshan Acharya</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">My name is </span><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> name </span><span style="color: #89DDFF">}}</span><span style="color: #A6ACCD">.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span></code></pre>
+<p>Above code will output:</p>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">My name is Roshan Acharya.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span></code></pre>
+<h2 id="loops" tabindex="-1">Loops</h2>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> langs </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> [</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Javascript</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Rust</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">Typescript</span><span style="color: #89DDFF">&quot;</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">C++</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">] </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">div</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> langs</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">map</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD; font-style: italic">lang</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> </span><span style="color: #676E95; font-style: italic">/* HTML */</span><span style="color: #89DDFF">`</span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">I love </span><span style="color: #89DDFF">${</span><span style="color: #A6ACCD">lang</span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #89DDFF">`</span><span style="color: #A6ACCD">) </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">div</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span></code></pre>
+<p>(<code>/* HTML */</code> comment is used by <code>vscode-ulka</code> extension to highlight and format html inside template literal.)
+Above code will output:</p>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">div</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">I love Javascript.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">I love Rust.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">I love Typescript.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">I love C++.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">div</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span></code></pre>
+<h2 id="conditionals" tabindex="-1">Conditionals</h2>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> ulkaIsAwesome </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #FF9CAC">true</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> ulkaIsAwesome </span><span style="color: #89DDFF">?</span><span style="color: #A6ACCD"> </span><span style="color: #676E95; font-style: italic">/* HTML */</span><span style="color: #89DDFF">`</span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">😍 Thank you.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #89DDFF">`</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #676E95; font-style: italic">/* HTML */</span><span style="color: #89DDFF">`</span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">💔😥</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #89DDFF">`</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span></code></pre>
+<p>Above code will output:</p>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">😍 Thank you.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span></code></pre>
+<p>If you wan't to use <code>if/else</code> statement then you can use <code>IIFE</code>.</p>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">{{</span></span>
+<span class="line"><span style="color: #A6ACCD">  (</span><span style="color: #89DDFF">()</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #F07178">    </span><span style="color: #89DDFF; font-style: italic">if</span><span style="color: #F07178"> (</span><span style="color: #FF9CAC">true</span><span style="color: #F07178">)</span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #F07178">      </span><span style="color: #89DDFF; font-style: italic">return</span><span style="color: #F07178"> </span><span style="color: #676E95; font-style: italic">/* HTML */</span><span style="color: #89DDFF">`</span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #F07178">😍 Thank you.</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #89DDFF">`</span></span>
+<span class="line"><span style="color: #F07178">    </span><span style="color: #89DDFF">}</span><span style="color: #F07178"> </span><span style="color: #89DDFF; font-style: italic">else</span><span style="color: #F07178"> </span><span style="color: #89DDFF">{</span></span>
+<span class="line"><span style="color: #F07178">      </span><span style="color: #89DDFF; font-style: italic">return</span><span style="color: #F07178"> </span><span style="color: #676E95; font-style: italic">/* HTML */</span><span style="color: #89DDFF">`</span><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #F07178">💔😥</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #89DDFF">`</span></span>
+<span class="line"><span style="color: #F07178">    </span><span style="color: #89DDFF">}</span></span>
+<span class="line"><span style="color: #F07178">  </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)()</span></span>
+<span class="line"><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span></code></pre>
+<h2 id="importing" tabindex="-1">Importing</h2>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">import</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./partials/header.ulka</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">) </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">Hello World</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">import</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./partials/footer.ulka</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">) </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #676E95; font-style: italic">&lt;!-- OR --&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">{{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> head </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">import</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./partials/header.ulka</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">)</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> footer </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">import</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./partials/footer.ulka</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">)</span></span>
+<span class="line"><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> head </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">&lt;</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span><span style="color: #A6ACCD">Hello World</span><span style="color: #89DDFF">&lt;/</span><span style="color: #F07178">h1</span><span style="color: #89DDFF">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> footer </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span></code></pre>
+<h2 id="using-require" tabindex="-1">Using require</h2>
+<p>You can use <code>require</code> as you do in normal javascript.</p>
+<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">{{</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">require</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">./package.json</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">)</span><span style="color: #89DDFF">.</span><span style="color: #A6ACCD">version </span><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #89DDFF">{{</span></span>
+<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> dayjs </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">require</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&quot;</span><span style="color: #C3E88D">dayjs</span><span style="color: #89DDFF">&quot;</span><span style="color: #A6ACCD">)</span></span>
+<span class="line"><span style="color: #A6ACCD">  dayjs</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">format</span><span style="color: #A6ACCD">()</span></span>
+<span class="line"><span style="color: #89DDFF">}}</span></span>
+<span class="line"></span></code></pre>
+<p></p>
+
+
+<br />
+<a target="_blank" href="https://github.com/ulkajs/ulkajs.github.io/blob/main/src/docs/template-engine.md" class="button">
+  <i class="icon-pencil"></i>
+  Edit this page on github
+</a>
+
+<div class="buttons"><a href="/docs/quickstart/" class="button">
+        <i class="icon-left-open-mini"></i>
+        Quickstart
+      </a><a href="/docs/ulka-config/" class="button">
+        Ulka Config
+        <i class="icon-right-open-mini"></i>
+      </a></div>
+</main>
+
+    <footer>
+  <p>Released under MIT License</p>
+  <p>Copyright &copy; 2021-present Roshan Acharya</p>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@1.0.0-alpha.28"></script>
+<script>
+  docsearch({
+    container: '#docsearch',
+    apiKey: '89909a28cda0776803f1e51e3c9f3961',
+    indexName: 'ulka',
+  })
+</script>
+
+
+    <script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        quicklink.listen()
+      })
+    </script>
+
+  </body>
+</html>

@@ -128,30 +128,10 @@
 <aside class="sidebar" data-responsive-sidebar>
   <ul>
     <li>
-      <a class="" href="/docs/">Introduction</a>
+      <a class="active" href="/plugins/">Plugins</a>
       
     </li><li>
-      <a class="" href="/docs/quickstart/">Quickstart</a>
-      
-    </li><li>
-      <a class="" href="/docs/template-engine/">Ulka Syntax</a>
-      
-    </li><li>
-      <a class="" href="/docs/ulka-config/">Ulka Config</a>
-      
-    </li><li>
-      <a class="active" href="/docs/plugins/">Plugins</a>
-      <ul>
-            <li>
-      <a class="" href="#what-are-plugins">What are plugins</a>
-      
-    </li><li>
-      <a class="" href="#using-plugins">Using plugins</a>
-      
-    </li>
-          </ul>
-    </li><li>
-      <a class="" href="/docs/special-matter-keys/">Special Keys</a>
+      <a class="" href="/plugins/plugin-tags/">Tags Plugin</a>
       
     </li>
   </ul>
@@ -173,7 +153,7 @@
       <ul class="nav-items" data-responsive-sidebar>
         <li>
           <a
-            class="active"
+            class=""
             href="/docs"
           >
             Docs
@@ -181,7 +161,7 @@
         </li>
         <li>
           <a
-            class=""
+            class="active"
             href="/plugins"
           >
             Plugins
@@ -226,47 +206,18 @@
 
 <h1>Plugins</h1>
 
-<h2 id="what-are-plugins" tabindex="-1">What are plugins ?</h2>
-<p>Plugins are powerful extensions that enhance the functionality of Ulka. They allow you to customize and modify the site generation process at specific stages.</p>
-<h2 id="using-plugins" tabindex="-1">Using plugins</h2>
-<p>Using ulka plugins is very straight forward. All you need to do is pass the plugin to the plugins array in <code>ulka-config.js</code></p>
-<h4 id="passing-plugin-as-a-string" tabindex="-1">Passing plugin as a string</h4>
-<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #89DDFF">module.exports</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
-<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">plugins</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [</span></span>
-<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">&#39;</span><span style="color: #C3E88D">@ulkajs/plugin-tags</span><span style="color: #89DDFF">&#39;</span><span style="color: #89DDFF">,</span></span>
-<span class="line"><span style="color: #89DDFF">    </span><span style="color: #676E95; font-style: italic">// or</span></span>
-<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">{</span></span>
-<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #F07178">plugin</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&#39;</span><span style="color: #C3E88D">@ulkajs/plugin-tags</span><span style="color: #89DDFF">&#39;</span><span style="color: #89DDFF">,</span></span>
-<span class="line"><span style="color: #A6ACCD">      </span><span style="color: #F07178">options</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">matterKey</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&#39;</span><span style="color: #C3E88D">_tags</span><span style="color: #89DDFF">&#39;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">},</span></span>
-<span class="line"><span style="color: #A6ACCD">    </span><span style="color: #89DDFF">},</span></span>
-<span class="line"><span style="color: #A6ACCD">  ]</span><span style="color: #89DDFF">,</span></span>
-<span class="line"><span style="color: #89DDFF">}</span></span>
-<span class="line"></span></code></pre>
-<h4 id="passing-plugin-as-a-function" tabindex="-1">Passing plugin as a function</h4>
-<pre class="shiki material-theme-palenight" style="background-color: #292D3E" tabindex="0"><code><span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> _tagsPlugin </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">require</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">&#39;</span><span style="color: #C3E88D">@ulkajs/plugin-tags</span><span style="color: #89DDFF">&#39;</span><span style="color: #A6ACCD">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #C792EA">const</span><span style="color: #A6ACCD"> tagsPlugin </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">()</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">=&gt;</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">_tagsPlugin</span><span style="color: #A6ACCD">(</span><span style="color: #89DDFF">{</span><span style="color: #A6ACCD"> </span><span style="color: #F07178">matterKey</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">&#39;</span><span style="color: #C3E88D">_tags</span><span style="color: #89DDFF">&#39;</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">}</span><span style="color: #A6ACCD">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #89DDFF">module.exports</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">=</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{</span></span>
-<span class="line"><span style="color: #A6ACCD">  </span><span style="color: #F07178">plugins</span><span style="color: #89DDFF">:</span><span style="color: #A6ACCD"> [tagsPlugin]</span><span style="color: #89DDFF">,</span></span>
-<span class="line"><span style="color: #89DDFF">}</span></span>
-<span class="line"></span></code></pre>
-<br />
-Plugins in Ulka offer a flexible and customizable way to enhance its functionality. Whether using pre-existing plugins from the npm ecosystem or creating your own custom plugins, you can extend Ulka's capabilities and tailor the site generation process to meet your specific requirements. By exploring the available plugins and experimenting with different options, you can unlock the full potential of Ulka and create remarkable static websites.
-<br />
+<h2 id="list-of-plugins" tabindex="-1">List Of Plugins</h2>
+<p><a href="/plugins/plugin-tags">@ulkajs/plugin-tags</a></p>
 
 
 <br />
-<a target="_blank" href="https://github.com/ulkajs/ulkajs.github.io/blob/main/src/docs/plugins.md" class="button">
+<a target="_blank" href="https://github.com/ulkajs/ulkajs.github.io/blob/main/src/plugins/index.md" class="button">
   <i class="icon-pencil"></i>
   Edit this page on github
 </a>
 
-<div class="buttons"><a href="/docs/ulka-config/" class="button">
-        <i class="icon-left-open-mini"></i>
-        Ulka Config
-      </a><a href="/docs/special-matter-keys/" class="button">
-        Special Keys
+<div class="buttons"><span></span><a href="/plugins/plugin-tags/" class="button">
+        Tags Plugin
         <i class="icon-right-open-mini"></i>
       </a></div>
 </main>
