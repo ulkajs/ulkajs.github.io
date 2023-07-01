@@ -8,6 +8,9 @@ module.exports = defineConfig(async (ulka) => {
   md.set({ html: true }).use(anchor, { slugify })
 
   return {
+    metaData: {
+      domain: 'https://ulka.js.org',
+    },
     input: 'src',
     output: 'dist',
     layout: path.join('src', 'layouts'),
@@ -16,6 +19,9 @@ module.exports = defineConfig(async (ulka) => {
     contents: {
       main: {
         match: ['index.ulka'],
+      },
+      others: {
+        match: ['sitemap.xml.ulka'],
       },
       docs: content(ulka, 'docs/**.md'),
       plugins: content(ulka, 'plugins/**.md'),
