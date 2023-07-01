@@ -2,7 +2,7 @@ const description =
   'A fast, pluggable and lightweight static site generator written in javascript.'
 const title = 'Ulka Js'
 const domain = 'https://ulka.js.org'
-const image = domain + '/assets/meta-image.jpeg'
+const image = domain + '/assets/images/screenshot.png'
 
 const tags = [
   { name: 'title', content: title },
